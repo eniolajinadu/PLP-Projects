@@ -12,7 +12,7 @@ df_age_filtered= df[df['Age'] < 30]
 ra = pd.read_csv('/home/eniolajinadu/GitHub/PLP-Projects/Python/data.csv')
 
 df['Country'] = ['India', 'Nigeria', 'US']
-print(df)
+#print(df)
 
 df.to_csv ('/home/eniolajinadu/GitHub/PLP-Projects/Python/data.csv', index=False)
 #re = pd.read_csv('/home/eniolajinadu/GitHub/PLP-Projects/Python/data.csv')
