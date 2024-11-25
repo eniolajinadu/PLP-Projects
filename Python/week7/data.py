@@ -17,6 +17,9 @@ print(df.info()) #to display the summary of the dataset
 print(df.describe()) #to get a summary of the dataset
 print(df.isnull().sum()) #to check for missing values in the dataset
 
+df_keyword = df['Keywords'].str.contains(r'\bsample\b', case = False, na = False).sum()
+print(f'Number of entries with "sample": {df_keyword}') #to count the number of entries with "sample"
+
 df_grouped = df.groupby('Topic').agg({'Student Country':'count', 'Question ID':'count'})
 print(df_grouped)
 
